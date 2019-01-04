@@ -1,4 +1,4 @@
-# rancher-cli-k8s
+# Rancher CLI 2.0.6 for Gitlab
 Rancher v2 CLI with kubectl
 
 Just needed a version of the rancher v2 cli with kubectl installed also
@@ -12,7 +12,7 @@ If you have done a `rancher login` on the host, you can map the `.rancher` folde
 Otherwise, you'll need to login using an API token from your rancher gui. In a build scenario You could create a new API key from your account in the rancher2 GUI and then expose it via environment variable and then:
 
 ```
-rancher login "$RANCHER_SERVER_URL" -t "$RANCHER_API_TOKEN"
+rancher login "$RANCHER_SERVER_URL" -t "$RANCHER_API_TOKEN" --context $RANCHER_PROJECT (e.g. c-kmxs4:p-np8qm)
 rancher kubectl get nodes
 ...
 ```
